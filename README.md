@@ -21,7 +21,7 @@ That's because you normally need to change to the other directory you want to ba
 
 ## Requirements
 
-* The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
+* The Duplicacy CLI needs to be installed and functional via the `duplicacy` command.
 * The `sftp` server needs to be reachable via an `ssh` key.
 * The backup directory on the sftp server must already exist.
 * When prompted for an SSH password, you can just hit `<enter>` since you are using SSH keys.
