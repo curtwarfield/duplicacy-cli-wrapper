@@ -31,7 +31,7 @@ directory without needing to change to the other directories first.
 * The `duplicacy` CLI package needs to be installed and functional via the `duplicacy` command.
 * The `sftp` server needs to be reachable via an `ssh` key.
 * The backup directory on the `sftp` server must already exist.
-* When prompted for an `SSH` password, you can leave it blank and hit `<enter>` if you are using and `SSH` key only.
+* When prompted for an `SSH` password, you can leave it blank and hit `<enter>` if you are using an `SSH` key only.
 * When prompted for the private `SSH` key, it will normally be in your `.ssh` directory and named `id_rsa`.
 * Be sure to type in the full path to the private `SSH` key when prompted.
 * When prompted to type a storage password, be sure to remember the password because you can't access your backups without it!
