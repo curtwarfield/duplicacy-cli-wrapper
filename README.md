@@ -14,9 +14,8 @@
 
 * Creates a single `.duplicacy/preferences` file for multiple backups.
 
-> When you run the `init` command, a preferences file is created in a `.duplicacy` directory in the current directory.   
-> When you try to run the `init` command again to initialize another repository, you will get
-> an error message that the directory has already been initialized.
+> When you run the `init` command, a preferences file is created in a `.duplicacy` directory in the current directory. When you try to run the `init` command again to initialize another repository,
+> you will get an error message that the directory has already been initialized.
 
 > Normally you must first change to the directory you want to back up before running the `init` command again because **Duplicacy** will not modify an existing `.duplicacy/preferences` file.
 
