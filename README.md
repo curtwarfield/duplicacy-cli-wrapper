@@ -10,21 +10,29 @@
 * A software license is required but the **command-line interface** (CLI) version is free for personal use.
 
 ## Features
+* Automatically creates and runs the **duplicacy** `init` command for `sftp` storage backends.
 
-Currently works with `sftp` storage only. Planning to add all storage types in the future.
+* Creates a single `.duplicacy/preferences` file for multiple backups.
 
-When you initialize a repository with the `init` command, a preferences file is created in a `.duplicacy` directory in your current directory.
+> When you run the `init` command, a preferences file is created in a `.duplicacy` directory in the current directory.   
+> When you try to run the `init` command again to initialize another repository, you will get
+> an error message that the directory has already been initialized.
 
-If you run the `init` commmand again to create a new repository, you will get an error message that the directory has already been initialized.
+> Normally you must first change to the directory you want to back up before running the `init` command again because **Duplicacy** will not modify an existing `.duplicacy/preferences` file.
 
-That's because you normally need to change to the other directory you want to back up **before** running the `init` command since the `duplicacy init` command will not modify an existing `.duplicacy/preferences` file.
+* Allows you to initialize multiple **duplicacy** repositories from your home
+directory without needing to change to the other directories first.
 
+## Planning
+* Additional storage backends will be supported in the future.
+
+* Additional commands will be supported in the future.
 ## Requirements
 
-* The Duplicacy CLI needs to be installed and functional via the `duplicacy` command.
+* The `duplicacy` CLI package needs to be installed and functional via the `duplicacy` command.
 * The `sftp` server needs to be reachable via an `ssh` key.
-* The backup directory on the sftp server must already exist.
-* When prompted for an SSH password, you can just hit `<enter>` since you are using SSH keys.
-* When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
-* Be sure to type in the full path to the private SSH key when prompted.
-* When prompted to type in a password for the storage, it's important to remember the password.
+* The backup directory on the `sftp` server must already exist.
+* When prompted for an `SSH` password, you can leave it blank and hit `<enter>` if you are using and `SSH` key only.
+* When prompted for the private `SSH` key, it will normally be in your `.ssh` directory and named `id_rsa`.
+* Be sure to type in the full path to the private `SSH` key when prompted.
+* When prompted to type a storage password, be sure to remember the password because you can't access your backups without it!
