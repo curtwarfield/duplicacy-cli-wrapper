@@ -1,8 +1,12 @@
 #!/bin/bash
 
 clear
+
 intro_message=$(cat <<EOF
 Duplicacy wrapper script
+
+Currently only supports the duplicacy init command to initialize your storage. Planning to 
+add all commands in the future.
 
 Currently works with sftp storage only. Planning to add all storage types in the future.
 
