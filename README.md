@@ -1,4 +1,4 @@
-# Duplicacy CLI wrapper
+# Duplicacy CLI wrapper script
 
 ## Introduction
 
@@ -8,6 +8,8 @@
 * Excellent performance with [Lock Free Deduplication](https://github.com/gilbertchen/duplicacy/wiki/Lock-Free-Deduplication).
 * Extensive [storage](https://forum.duplicacy.com/t/supported-storage-backends/1107) backend support.
 * A software license is required but the **command-line interface** (CLI) version is free for personal use.
+
+## Features
 
 Currently works with `sftp` storage only. Planning to add all storage types in the future.
 
