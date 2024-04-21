@@ -39,5 +39,8 @@ directory without needing to change to the other directories first.
 ## Getting started
 The wrapper script is written in `bash` and simply just needs to be downloaded and made executable.
 
+## Contribute
+Contributions are always welcome. Feel free to improve existing features, add new features or report issues.
+
 ## License
-MIT
+Duplicacy-cli-wrapper is licensed under the MIT License.
