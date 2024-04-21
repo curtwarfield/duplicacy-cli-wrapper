@@ -11,9 +11,9 @@ That's because you normally need to change to the other directory you want to ba
 ## Requirements
 
 * The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
-* The sftp server needs to be reachable via an ssh key.
+* The `sftp` server needs to be reachable via an `ssh` key.
 * The backup directory on the sftp server must already exist.
-* When prompted for an SSH password, you can just hit <enter> since you are using SSH keys.
+* When prompted for an SSH password, you can just hit `<enter>` since you are using SSH keys.
 * When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
 * Be sure to type in the full path to the private SSH key when prompted.
 * When prompted to type in a password for the storage, it's important to remember the password.
