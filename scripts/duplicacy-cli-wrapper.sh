@@ -2,7 +2,7 @@
 
 clear
 intro_message=$(cat <<EOF
-Duplicacy multiple repository initialization
+Duplicacy wrapper script
 
 Currently works with sftp storage only. Planning to add all storage types in the future.
 
@@ -21,13 +21,14 @@ directory without needing to change to the other directories you want to back up
 It will allow you to have one .duplicacy/preferences file in your home directory and eliminate the
 need to have a separate .duplicacy/preference file in every directory that you want to back up.
 
-* The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
-* The sftp server needs to be reachable via an ssh key.
+* The `duplicacy` CLI needs to be installed and functional via the 'duplicacy' command.
+* The `sftp` server needs to be reachable via an ssh key.
 * The backup directory on the sftp server must already exist.
-* When prompted for an SSH password, you can just hit <enter> since you are using SSH keys.
-* When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
-* Be sure to type in the full path to the private SSH key when prompted.
+* When prompted for an `SSH` password, you can just hit <enter> since you are using SSH keys.
+* When prompted for the private `SSH` key, it will normally be in your .ssh directory and named id_rsa
+* Be sure to type in the full path to the private `SSH` key when prompted.
 * When prompted to type in a password for the storage, it's important to remember the password.
+
 EOF
 )
 echo "$intro_message"
