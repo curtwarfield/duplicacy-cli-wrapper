@@ -28,7 +28,7 @@ need to have a separate .duplicacy/preference file in every directory that you w
 * When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
 * Be sure to type in the full path to the private SSH key when prompted.
 * When prompted to type in a password for the storage, it's important to remember the password.
-
+   
 EOF
 )
 echo "$intro_message"
