@@ -6,7 +6,7 @@ When you initialize a repository with the `init` command, a preferences file is 
 
 If you run the `init` commmand again to create a new repository, you will get an error message that the directory has already been initialized.
 
-You normally need to change to the directory you want to back up before running the `init` command because **duplicacy** will not modify the existing `.duplicacy/preferences` file.
+That's because you first need to change to the other directory you want to back up before running the `init` command because **duplicacy** will not modify the existing `.duplicacy/preferences` file.
 ## Set Up
 
 Running the container is easy. Fire up the container as usual. You can set which port it runs on.
