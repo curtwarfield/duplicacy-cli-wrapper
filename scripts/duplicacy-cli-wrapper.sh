@@ -1,34 +1,37 @@
 #!/bin/bash
 
 clear
+intro_message=$(cat <<EOF
+Duplicacy multiple repository initialization
 
-echo "Duplicacy multiple repository initialization"
-echo
-echo "Currently works with sftp storage only. Planning to add all storage types in the future."
-echo
-echo "When you initialize a duplicacy repository with the 'init' command, a preferences file is"
-echo "created in a .duplicacy directory in your current directory."
-echo
-echo "If you try to initialize any additional repositories from the same directory, you will get"
-echo "an error message that the directory has already been initialized."
-echo
-echo "You normally need to change to the directories you want to back up first before initializing a new repository"
-echo "with the 'init' command because duplicacy will not modify the existing .duplicacy/preferences file."
-echo
-echo "This bash script allows you to initialize multiple duplicacy repositories from your home"
-echo "directory without needing to change to the other directories you want to back up."
-echo
-echo "It will allow you to have one .duplicacy/preferences file in your home directory and eliminate the"
-echo "need to have a separate .duplicacy/preference file in every directory that you want to back up."
-echo
-echo "* The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command."
-echo "* The sftp server needs to be reachable via an ssh key."
-echo "* The backup directory on the sftp server must already exist."
-echo "* When prompted for an SSH password, you can just hit <enter> since you are using SSH keys."
-echo "* When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa"
-echo "* Be sure to type in the full path to the private SSH key when prompted." 
-echo "* When prompted to type in a password for the storage, it's important to remember the password."
-echo
+Currently works with sftp storage only. Planning to add all storage types in the future.
+
+When you initialize a duplicacy repository with the 'init' command, a preferences file is
+created in a .duplicacy directory in your current directory.
+
+If you try to initialize any additional repositories from the same directory, you will get
+an error message that the directory has already been initialized.
+
+You normally need to change to the directories you want to back up first before initializing a new repository
+with the 'init' command because duplicacy will not modify the existing .duplicacy/preferences file.
+
+This bash script allows you to initialize multiple duplicacy repositories from your home
+directory without needing to change to the other directories you want to back up.
+
+It will allow you to have one .duplicacy/preferences file in your home directory and eliminate the
+need to have a separate .duplicacy/preference file in every directory that you want to back up.
+
+* The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
+* The sftp server needs to be reachable via an ssh key.
+* The backup directory on the sftp server must already exist.
+* When prompted for an SSH password, you can just hit <enter> since you are using SSH keys.
+* When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
+* Be sure to type in the full path to the private SSH key when prompted.
+* When prompted to type in a password for the storage, it's important to remember the password.
+EOF
+)
+echo "$intro_message"
+
 # Function to prompt the user to continue or exit
 prompt_continue() {
     read -p "Would you like to continue? (y/n): " choice
