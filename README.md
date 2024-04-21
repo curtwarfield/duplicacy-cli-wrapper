@@ -1,11 +1,12 @@
-# Pluto for Channels
+# Duplicacy repository initialization
 
-This simple Docker image will generate an M3U playlist and EPG optimized for use in [Channels](https://getchannels.com) and expose them over HTTP.
+Currently works with `sftp` storage only. Planning to add all storage types in the future.
 
-[Channels](https://getchannels.com) supports [custom channels](https://getchannels.com/docs/channels-dvr-server/how-to/custom-channels/) by utilizing streaming sources via M3U playlists.
+When you initialize a repository with the `init` command, a preferences file is created in a `.duplicacy` directory in your current directory.
 
-[Channels](https://getchannels.com) allows for [additional extended metadata tags](https://getchannels.com/docs/channels-dvr-server/how-to/custom-channels/#channels-extensions) in M3U playlists that allow you to give it extra information and art to make the experience better. This project adds those extra tags to make things look great in Channels.
+If you run the `init` commmand again to create a new repository, you will get an error message that the directory has already been initialized.
 
+You normally need to change to the directory you want to back up before running the `init` command because **duplicacy** will not modify the existing `.duplicacy/preferences` file.
 ## Set Up
 
 Running the container is easy. Fire up the container as usual. You can set which port it runs on.
