@@ -32,7 +32,8 @@ need to have a separate .duplicacy/preference file in every directory that you w
 * When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa.
 * Be sure to type in the full path to the private SSH key when prompted.
 * When prompted to type a storage password, be sure to remember the password because you can't access your backups without it!
-   
+
+The init command will now be run to initialize storage for a new backup...
 EOF
 )
 echo "$intro_message"
