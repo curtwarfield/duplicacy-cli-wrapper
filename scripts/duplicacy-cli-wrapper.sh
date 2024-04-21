@@ -52,27 +52,27 @@ read -p "Enter the IP Address or hostname for the sftp server: " servername
 read -p "Enter the name of the backup directory on the sftp server: " remotedirectory
 
 # Check for existing preferences file:
-file_path="/home/curt/.duplicacy/preferences"
+file_path=~/.duplicacy/preferences
 
 if [ -f "$file_path" ]; then
-mv "$file_path" "/home/curt/.duplicacy/oldpreferences"
+mv "$file_path" ~/.duplicacy/oldpreferences
 
 duplicacy init -e -storage-name $storagename -repository $repository $backupid sftp://$username@$servername/$remotedirectory
 
-file="/home/curt/.duplicacy/preferences"
+file=~/.duplicacy/preferences
 
 temp_file=$(mktemp)
 tail -n +2 "$file" > "$temp_file"
 mv "$temp_file" "$file"
 
-file="/home/curt/.duplicacy/oldpreferences"
+file=~/.duplicacy/oldpreferences
 temp_file=$(mktemp)
 head -n -2 "$file" > "$temp_file"
 mv "$temp_file" "$file"
 echo "    }," >> "$file"
 
-source_file="/home/curt/.duplicacy/preferences"
-destination_file="/home/curt/.duplicacy/oldpreferences"
+source_file=~/.duplicacy/preferences
+destination_file=~/.duplicacy/oldpreferences
 
 cat "$source_file" >> "$destination_file"
 mv "$destination_file" "$source_file"
