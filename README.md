@@ -36,6 +36,8 @@ directory without needing to change to the other directories first.
 * Be sure to type in the full path to the private `SSH` key when prompted.
 * When prompted to type a storage password, be sure to remember the password because you can't access your backups without it!
 
+> **This wrapper script will only work on Linux systems!**
+
 ## Getting started
 The wrapper script is written in `bash` and simply just needs to be downloaded and made executable.
 
