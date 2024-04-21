@@ -6,13 +6,13 @@ When you initialize a repository with the `init` command, a preferences file is 
 
 If you run the `init` commmand again to create a new repository, you will get an error message that the directory has already been initialized.
 
-That's because you normally need to change to the other directory you want to back up **before** running the `init` command since `duplicacy` will not modify an existing `.duplicacy/preferences` file.
-## Set Up
+That's because you normally need to change to the other directory you want to back up **before** running the `init` command since the `duplicacy init` command will not modify an existing `.duplicacy/preferences` file.
+## Requirements
 
-Running the container is easy. Fire up the container as usual. You can set which port it runs on.
-
-    docker run -d --restart unless-stopped --name pluto-for-channels -p 8080:80 jonmaddox/pluto-for-channels
-
-You can retrieve the playlist and EPG via the status page.
-
-    http://127.0.0.1:8080
+* The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
+* The sftp server needs to be reachable via an ssh key.
+* The backup directory on the sftp server must already exist.
+* When prompted for an SSH password, you can just hit <enter> since you are using SSH keys.
+* When prompted for the private SSH key, it will normally be in your .ssh directory and named id_rsa
+* Be sure to type in the full path to the private SSH key when prompted.
+* When prompted to type in a password for the storage, it's important to remember the password.
