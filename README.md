@@ -1,4 +1,13 @@
-# Duplicacy repository initialization
+# Duplicacy CLI wrapper
+
+## Introduction
+
+[Duplicacy](https://duplicacy.com) is a cross-platform cloud backup tool with client-side encryption and fast performance.
+
+* Available as a web-based GUI or a command line tool.
+* Excellent performance with [Lock Free Deduplication](https://github.com/gilbertchen/duplicacy/wiki/Lock-Free-Deduplication).
+* Extensive [storage](https://forum.duplicacy.com/t/supported-storage-backends/1107) backend support.
+* A software license is required but the **command-line interface** (CLI) version is free for personal use.
 
 Currently works with `sftp` storage only. Planning to add all storage types in the future.
 
