@@ -7,6 +7,7 @@ When you initialize a repository with the `init` command, a preferences file is 
 If you run the `init` commmand again to create a new repository, you will get an error message that the directory has already been initialized.
 
 That's because you normally need to change to the other directory you want to back up **before** running the `init` command since the `duplicacy init` command will not modify an existing `.duplicacy/preferences` file.
+
 ## Requirements
 
 * The Duplicacy CLI needs to be installed and functional via the 'duplicacy' command.
